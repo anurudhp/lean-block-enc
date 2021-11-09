@@ -1,7 +1,8 @@
 [package]
 name = "qsvt-block-enc"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.28.0"
+lean_version = "leanprover-community/lean:3.35.1"
 path = "src"
 
 [dependencies]
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "6af6f67052864e96ccab151b3e3895ba579e2e26"}
