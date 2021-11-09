@@ -40,5 +40,5 @@ theorem Z2_I : Z * Z = I := begin
   -- why the hell does omega not work here.
   -- I have H : k_val.succ.succ < 2
   -- ITS FALSE! WHY CANT IT FIGURE THAT OUT!
-  sorry,
+  repeat {sorry},
 end
