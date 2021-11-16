@@ -37,8 +37,14 @@ theorem Z2_I : Z * Z = I := begin
   cases i_val; simp,
   cases k_val; simp,
   cases i_val; cases k_val; simp; exfalso,
+  repeat{sorry},
   -- why the hell does omega not work here.
   -- I have H : k_val.succ.succ < 2
   -- ITS FALSE! WHY CANT IT FIGURE THAT OUT!
-  repeat {sorry},
+end
+
+theorem stupid : ∀ (k : ℕ), k.succ.succ < 2 -> false := begin
+  intros k H,
+  
+
 end
