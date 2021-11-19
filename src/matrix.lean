@@ -115,7 +115,21 @@ def kron (A : Matrix m n) (B : Matrix p q) : Matrix (m*p) (n*q)
 def kron_loc (r : fin m) (v : fin p) : fin (m * p) :=
   ⟨p * (r : ℕ) + (v : ℕ), sorry⟩
 
+def kron_n : Π (A : Matrix p q) (n : ℕ), Matrix (p^n) (q^n) := begin
+  intros,
+  cases n,
+  simp,
+  exact (λ i j, 1),
+  induction n with n A', {
+    simp,
+    exact A,
+  }, {
+    exact (kron A A'),
+  }
+end
+
 end kron
 
 infixl ` ⊗ `:75 := kron
+infixl ` ⊗ₙ `:76 := kron_n
 

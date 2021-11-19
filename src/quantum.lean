@@ -76,6 +76,7 @@ notation `⟨-|` := braminus
 -- |00...0⟩ (= |0⟩ ⊗ ... ⊗ |0⟩ or the `n`-th tensor power of |0⟩).
 -- Used for zero padding or ancillae qubits.
 def ket_zeros (n : ℕ) : Ket n := std_basis ⟨0, by simp⟩
+def bra_zeros (n : ℕ) : Bra n := ket_zeros n †
 
 ------------------------------------------------------------------------------
 -- Common single qubit unitaries
