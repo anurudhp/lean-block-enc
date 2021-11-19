@@ -1,3 +1,10 @@
+/-
+Copyright 2021 Anurudh Peduri
+Licensed under the Apache License, Version 2.0 (check LICENSE).
+
+Authors: Anurudh Peduri
+-/
+
 import quantum
 
 namespace BlockEncoding
