@@ -10,6 +10,8 @@ import data.complex.basic
 import data.complex.is_R_or_C
 import algebra.star.basic
 import data.matrix.basic
+import analysis.complex.basic
+import analysis.normed_space.basic
 open_locale complex_conjugate
 
 ------------------------------------------------------------------------------
@@ -30,6 +32,11 @@ variables {m n : ℕ}
 -- Definition of `adjoint` or `†` (dagger) operator.
 @[simp]
 def adjoint (M : Matrix m n) : Matrix n m | x y := conj (M y x)
+
+noncomputable
+instance spectral_norm_group : normed_group (Matrix m n) := matrix.normed_group
+noncomputable
+instance spectral_norm_space : normed_space ℂ (Matrix m n) := matrix.normed_space
 
 end Matrix
 
