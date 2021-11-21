@@ -126,7 +126,7 @@ def kron_n : Π (A : Matrix p q) (n : ℕ), Matrix (p^n) (q^n) := begin
   intros,
   cases n,
   simp,
-  exact (λ i j, 1),
+  exact (I 1),
   induction n with n A', {
     simp,
     exact A,
