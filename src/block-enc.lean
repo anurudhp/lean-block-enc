@@ -49,7 +49,8 @@ def TrivialEncoding {s : ℕ} (U : Op s) (h : unitary U) : BlockEncoding 1 0 0 U
   := ⟨U, ⟨h, by { rw block_self, simp }⟩⟩
 
 -- GSLW19, Lemma 53
--- (Product of block-encoded matrices). If U is an (α, a, δ)-block-encoding of an s-qubit operator A,
+-- (Product of block-encoded matrices).
+-- If U is an (α, a, δ)-block-encoding of an s-qubit operator A,
 -- and V is an (β, b, ε)-block-encoding of an s-qubit operator B
 -- then (I b ⊗ U)(I a ⊗ V) is an (αβ, a + b, αε + βδ)-block-encoding of AB.
 def ProductEncoding {s a b : ℕ} {α δ β ε : ℝ} {A B : Op s}
